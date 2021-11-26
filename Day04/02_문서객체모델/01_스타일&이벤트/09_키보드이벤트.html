@@ -7,26 +7,14 @@
     <title>키보드 이벤트</title>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const text = document.getElementById('text')
-            const input = document.getElementById('input')
-            const key = document.getElementById('key')
-            let length = 0
-
-            // 입력
-            input.addEventListener('keyup', () => {
-                let content = input.value
-                length = input.value.length
-                text.innerText = content
-            })
-
+            const h1 = document.querySelector('h1')
             const print = (event) => {
                 let output = ''
                 output += `alt: ${event.altKey}<br>`
                 output += `ctrl: ${event.ctrlKey}<br>`
                 output += `shift: ${event.shiftKey}<br>`
-                output += `keyCode: ${event.keyCode}<br>`
-                output += `글자수 : ${length}`
-                key.innerHTML = output
+                output += `keyCode: ${event.keyCode}`
+                h1.innerHTML = output
 
                 // 엔터를 입력했을 때,
                 if( event.keyCode == 13 )
@@ -39,8 +27,6 @@
     </script>
 </head>
 <body>
-    <h1 id="text">입력해보세요:)</h1>
-    <input type="text" id="input" placeholder="입력해보세요:)" />
-    <h3 id="key"></h3>
+    <h1></h1>
 </body>
 </html>
