@@ -31,15 +31,16 @@ $(function() {
         $('.slide-item:last-child').prependTo(list)
     list.css({left: currentPosition-=slideWidth*(initNum) })
 
-    $('.slide-item').css({ opacity: 0.3 })
-    $('.slide-item:nth-child('+ (initNum+1) +')').css({ opacity: 1 })
-
     // 페이지 네비게이션
     for( let i = 0 ; i < slideCount ; i++ ) {
         let dot = "<a href='#' class='dot'></a>"
         $(".dots-box").append(dot)
     }
     $(".dot:first-child").addClass('active')
+
+    
+    $('.slide-item').css({ opacity: 0.3 })
+    $('.slide-item:nth-child('+ (initNum+1) +')').css({ opacity: 1 })
         
 
     // 이전 버튼 클릭 이벤트
