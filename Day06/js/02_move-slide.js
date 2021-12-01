@@ -42,6 +42,11 @@ $(function() {
     $('.slide-item').css({ opacity: 0.3 })
     $('.slide-item:nth-child('+ (initNum+1) +')').css({ opacity: 1 })
         
+    // 자동 재생
+    let timer = setInterval( () => {
+        $('.next').trigger('click');
+    }, 3000)
+
 
     // 이전 버튼 클릭 이벤트
     $('.prev').on('click', () => {
