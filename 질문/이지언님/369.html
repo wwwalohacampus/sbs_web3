@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let result = ''
+
+        for( let i = 1 ; i <= 100 ; i++ ) {
+            let ten = parseInt( i / 10 )
+            let one = ( i % 10 )
+
+
+            let trueten = ten == 3 || ten == 6 || ten == 9
+            let trueone = one == 3 || one == 6 || one == 9
+
+            if( trueten && trueone  ) {
+                result += '**'
+            } else if ( trueten || trueone ) {
+                result += '*'
+            } else { 
+                result += i
+            }
+            result += '\n'
+        }
+
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
