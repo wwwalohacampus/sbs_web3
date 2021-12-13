@@ -1,0 +1,34 @@
+
+#options,
+.dd-select,
+.dd-options {
+  width: 300px !important;
+}
+
+.dd-selected-text,
+.dd-option-text {
+  line-height: 64px !important;
+  padding-left: 100px !important;;
+}
+
+.dd-select {
+  background: #fff !important;
+  border-color: #d1d3d4 !important;
+  border-radius: 0 !important;
+}
+
+.dd-selected { font-weight: normal !important; }
+
+label { display: block; }
+
+input[type="text"], input[type="name"], input[type="email"], input[type="tel"], input[type="password"], select {
+    background: transparent;
+    width: 100%;
+    height: 42px;
+    padding: 10px;
+    display: block;
+    border: 1px solid #d1d3d4;
+    border-radius: 0;
+    outline: none;
+    transition: all 0.2s;
+}

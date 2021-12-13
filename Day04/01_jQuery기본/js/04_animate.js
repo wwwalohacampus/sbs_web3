@@ -4,7 +4,7 @@ $(function() {
 
     /* item1 */
     $('#item1 .hide').on('click', function() {
-        $('#item1 .target-box').fadeOut();
+        $('#item1 .target-box').hide();
     });
 
     $('#item1 .show').on('click', function() {
