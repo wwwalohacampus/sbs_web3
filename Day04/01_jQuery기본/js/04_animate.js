@@ -63,7 +63,6 @@ $(function() {
         $('#item4 .target-box').animate({
             'opacity': '0.3',
             'width': '400px',
-            fontSize : '40px'
         }, 1000);
     });
 
