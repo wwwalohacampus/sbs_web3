@@ -1,4 +1,6 @@
 
+let pause = false
+
 $(function() {
 
     let slide = $('#slide')
@@ -44,8 +46,19 @@ $(function() {
         
     // 자동 재생
     let timer = setInterval( () => {
-        $('.next').trigger('click');
+        if( !pause ) {
+            $('.next').trigger('click');
+        }
     }, 3000)
+
+    // 슬라이드에 마우스 오버 시
+    $('.slide-list, .btn-box').on('mouseover', function() {
+        pause = true
+    })
+
+    $('.slide-list, .btn-box').on('mouseout', function() {
+        pause = false
+    })
 
 
     // 이전 버튼 클릭 이벤트
